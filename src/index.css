@@ -30,26 +30,19 @@ header {
 }
 
 header,
-h2 {
+section {
   margin: 2rem 0 0 0;
 }
 
 @media screen and (min-width: 600px) {
   header,
-  h2 {
+  section {
     margin: 5rem 0 0 0;
   }
 }
 
 main {
-  margin: 2rem 0 0 0;
   text-align: center;
-}
-
-@media screen and (min-width: 600px) {
-  main {
-    margin: 5rem 0 0 0;
-  }
 }
 
 /* Hamburger Menu CSS */

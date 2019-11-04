@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <>
+    <section>
       <h2>Hi, I'm Brent McLeod</h2>
       <p>Welcome to my website.</p>
       <p>
@@ -10,7 +10,7 @@ const Home = () => {
         portfolio.
       </p>
       <p>If you have a job opportunity, I'd love to hear from you via email.</p>
-    </>
+    </section>
   );
 };
 
