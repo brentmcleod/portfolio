@@ -13,8 +13,23 @@ body {
   outline: none;
 }
 
+.profile-pic {
+  width: 15%;
+  height: auto;
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: calc(1.5em + 2vmin);
+}
+
+p {
+  font-size: 1.3125em;
+}
+
 .App {
   width: 90%;
+  max-width: 125em;
   margin: 0 auto;
 }
 
@@ -34,15 +49,29 @@ section {
   margin: 2rem 0 0 0;
 }
 
+.home {
+  margin: 1rem 0 0 0;
+}
+
 @media screen and (min-width: 600px) {
   header,
   section {
     margin: 5rem 0 0 0;
   }
+  .home {
+    margin: 2.5rem 0 0 0;
+  }
 }
 
 main {
   text-align: center;
+}
+
+.showcase {
+  width: 100vw;
+  height: 18.75em;
+  margin-left: calc(-50vw + 50%);
+  background-color: #f4f4f4;
 }
 
 /* Hamburger Menu CSS */
