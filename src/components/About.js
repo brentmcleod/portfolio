@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <h2>Learn more about me.</h2>
       <p>
         Born and raised in Melbourne, Australia, I studied Illustration at

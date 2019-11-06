@@ -3,7 +3,7 @@ import profilePic from "../images/brent_profile_pic.png";
 
 const Home = () => {
   return (
-    <section className="home">
+    <section id="home">
       <img className="profile-pic" src={profilePic} alt="Brent McLeod" />
       <h2>Hi, I'm Brent McLeod</h2>
       <p>Welcome to my website.</p>
