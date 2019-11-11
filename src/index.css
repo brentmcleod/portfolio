@@ -101,10 +101,6 @@ main {
   opacity: 0.7;
 }
 
-.hamburger.is-active:hover {
-  opacity: 1;
-}
-
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -114,7 +110,6 @@ main {
   height: 0.25rem;
   background-color: #000;
   border-radius: 0.25rem;
-  transition: background-color 120ms linear;
 }
 
 .hamburger-inner::before,
@@ -125,9 +120,7 @@ main {
 .hamburger-inner {
   top: 50%;
   margin-top: -0.125rem;
-  background-color: #000;
-  transition-duration: 75ms;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger-inner::before {
@@ -140,16 +133,9 @@ main {
     transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: white;
-}
-
 .hamburger.is-active .hamburger-inner {
   transform: rotate(45deg);
-  transition-delay: 120ms;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 120ms;
 }
 
 .hamburger.is-active .hamburger-inner::before {
@@ -167,35 +153,66 @@ main {
 
 .hamburger-menu {
   position: absolute;
-  display: none;
-  top: 0;
+  visibility: hidden;
   right: 0;
-  width: 0rem;
-  height: 0rem;
-  background-color: #000;
-  border-radius: 0.25rem;
+  opacity: 0;
   font-size: 2rem;
   text-align: right;
+  z-index: 1;
 }
 
 .hamburger.is-active + .hamburger-menu {
-  display: inline-block;
-  width: 8.75rem;
-  height: 10.375rem;
-  transition: width 5000ms ease-in-out, height 5000ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
 }
 
 .hamburger-menu ul {
-  margin: 2.5rem 0.25rem 0.25rem 0.5rem;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .hamburger-menu li {
-  margin-bottom: 0.25rem;
+  right: -1rem;
+  margin: 1rem 0;
+  opacity: 0;
+  transform: translateX(-1rem);
 }
 
 .hamburger-menu a {
-  color: white;
+  color: #000;
   text-decoration: none;
+}
+
+.hamburger-background {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background-color: #f4f4f4;
+  transition: visibility 0ms 300ms, opacity 300ms ease-in;
+}
+
+.hamburger.is-active + .hamburger-menu + .hamburger-background {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0ms, opacity 300ms ease-out;
+}
+
+.hamburger.is-active + .hamburger-menu li {
+  animation: hamburger-menu-li 300ms ease-out forwards;
+}
+
+@keyframes hamburger-menu-li {
+  from {
+    opacity: 0;
+    transform: translateX(0rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(1rem);
+  }
 }

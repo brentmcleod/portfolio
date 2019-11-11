@@ -3,30 +3,39 @@ import React, { useState } from "react";
 const Hamburger = () => {
   const [isActive, setIsActive] = useState(false);
 
+  const toggleActive = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div className="hamburger-wrapper">
       <button
-        className={"hamburger " + (isActive ? " is-active" : "")}
+        className={"hamburger" + (isActive ? " is-active" : "")}
         type="button"
-        onClick={() => {
-          setIsActive(!isActive);
-        }}
+        onClick={toggleActive}
       >
         <span className="hamburger-inner"></span>
       </button>
       <div className="hamburger-menu">
         <ul>
-          <li>
-            <a href="#about">About</a>
+          <li style={{ animationDelay: "100ms" }}>
+            <a href="#about" onClick={toggleActive}>
+              About
+            </a>
           </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
+          <li style={{ animationDelay: "200ms" }}>
+            <a href="#portfolio" onClick={toggleActive}>
+              Portfolio
+            </a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
+          <li style={{ animationDelay: "300ms" }}>
+            <a href="#contact" onClick={toggleActive}>
+              Contact
+            </a>
           </li>
         </ul>
       </div>
+      <div className="hamburger-background"></div>
     </div>
   );
 };
