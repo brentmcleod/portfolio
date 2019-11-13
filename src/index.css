@@ -1,11 +1,13 @@
 body {
   margin: 0;
+  color: #333;
   font-size: 100%;
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .no-focus-outline a:focus,
@@ -19,7 +21,12 @@ body {
   border-radius: 50%;
 }
 
+h1 {
+  font-family: "Rubik";
+}
+
 h2 {
+  font-family: "Rubik";
   font-size: calc(1.5em + 2vmin);
 }
 
@@ -67,13 +74,6 @@ main {
   text-align: center;
 }
 
-.showcase {
-  width: 100vw;
-  height: 18.75em;
-  margin-left: calc(-50vw + 50%);
-  background-color: #f4f4f4;
-}
-
 /* Hamburger CSS */
 
 .hamburger-wrapper {
@@ -94,7 +94,7 @@ main {
   border: 0;
   cursor: pointer;
   transition: opacity 150ms linear;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hamburger:hover {
@@ -156,9 +156,10 @@ main {
   visibility: hidden;
   right: 0;
   opacity: 0;
+  font-family: "Rubik";
   font-size: 2rem;
   text-align: right;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hamburger.is-active + .hamburger-menu {
@@ -173,7 +174,6 @@ main {
 }
 
 .hamburger-menu li {
-  right: -1rem;
   margin: 1rem 0;
   opacity: 0;
   transform: translateX(-1rem);
@@ -194,6 +194,7 @@ main {
   opacity: 0;
   background-color: #f4f4f4;
   transition: visibility 0ms 300ms, opacity 300ms ease-in;
+  z-index: 1;
 }
 
 .hamburger.is-active + .hamburger-menu + .hamburger-background {
@@ -209,10 +210,73 @@ main {
 @keyframes hamburger-menu-li {
   from {
     opacity: 0;
-    transform: translateX(0rem);
+    transform: translateX(-1rem);
   }
   to {
     opacity: 1;
-    transform: translateX(1rem);
+    transform: translateX(0rem);
   }
+}
+
+/* Project Card CSS */
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #f4f4f4;
+}
+
+.project-card {
+  position: relative;
+  width: 25rem;
+  height: 18.75rem;
+  margin: 1rem;
+  padding: 0.625rem;
+  background-color: white;
+  border-radius: 0.125rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.project-title-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25rem;
+  height: 0;
+  padding: 0.375rem 0.625rem 0 0.625rem;
+  background-color: white;
+  border-radius: 0 0 0.125rem 0.125rem;
+  transition: height 300ms ease-in-out;
+  overflow: hidden;
+}
+
+.project-card:hover .project-title-wrapper {
+  height: 2.75rem;
+}
+
+.project-title {
+  margin: 0 0 0.125rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.project-tags {
+  margin: 0;
+  font-size: 0.75rem;
+  text-align: left;
+  line-height: 0.75rem;
+  color: #999;
 }
