@@ -3,9 +3,7 @@ import React, { useState } from "react";
 const Hamburger = () => {
   const [isActive, setIsActive] = useState(false);
 
-  const toggleActive = () => {
-    setIsActive(!isActive);
-  };
+  const toggleActive = () => setIsActive(!isActive);
 
   return (
     <div className="hamburger-wrapper">

@@ -1,16 +1,16 @@
 import React from "react";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, openModal }) => {
   return (
-    <div className="project-card">
+    <div className="project-card" onClick={openModal}>
       <img
-        className="project-thumbnail"
-        src={require(`../images/projects/thumbnails/${project.name}.png`)}
+        className="card-image"
+        src={require(`../images/projects/card_images/${project.name}.png`)}
         alt={project.title}
       />
-      <div className="project-title-wrapper">
-        <p className="project-title">{project.title}</p>
-        <p className="project-tags">{project.tags.join(", ")}</p>
+      <div className="card-title-wrapper">
+        <p className="card-title">{project.title}</p>
+        <p className="card-tags">{project.tags.join(", ")}</p>
       </div>
     </div>
   );
