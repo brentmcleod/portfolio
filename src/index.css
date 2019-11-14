@@ -39,6 +39,7 @@ p {
   width: 90%;
   max-width: 125rem;
   margin: 0 auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -69,10 +70,6 @@ section {
   #home {
     margin: 2.5rem 0 0 0;
   }
-}
-
-main {
-  text-align: center;
 }
 
 /* Hamburger CSS */
@@ -223,6 +220,7 @@ main {
 
 .showcase {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -232,7 +230,7 @@ main {
 .project-card {
   position: relative;
   width: 25rem;
-  height: 18.75rem;
+  height: auto;
   margin: 1rem;
   padding: 0.625rem;
   background-color: white;
@@ -250,7 +248,7 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 25rem;
+  width: calc(100% - 1.25rem);
   height: 0;
   padding: 0.375rem 0.625rem 0 0.625rem;
   background-color: white;
@@ -318,8 +316,10 @@ main {
 }
 
 .project-title {
+  width: 100%;
   font-family: "Rubik";
   font-size: 2rem;
+  text-align: left;
 }
 
 .close-button {
@@ -363,4 +363,34 @@ main {
 .hero-image {
   width: 100%;
   height: auto;
+}
+
+.project-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1.3125rem;
+  text-align: left;
+}
+
+.project-description {
+  margin: 0;
+  padding: 0;
+}
+
+.project-links-tags {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .project-detail-wrapper {
+    flex-direction: row;
+  }
+  .project-description {
+    width: 70%;
+  }
+  .project-links-tags {
+    width: 30%;
+    margin: 0 0 0 1rem;
+  }
 }
