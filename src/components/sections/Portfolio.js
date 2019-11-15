@@ -6,7 +6,10 @@ import ProjectBoard from "../ProjectBoard";
 const Portfolio = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const toggleModal = event => setModalOpen(!modalOpen);
+  const toggleModal = () => {
+    document.body.classList.toggle("modal-open");
+    setModalOpen(!modalOpen);
+  };
 
   return (
     <section id="portfolio">

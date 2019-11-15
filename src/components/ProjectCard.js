@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectCard = ({ project, openModal }) => {
   return (
-    <div className="project-card" onClick={openModal}>
+    <button className="project-card" type="button" onClick={openModal}>
       <img
         className="card-image"
         src={require(`../images/projects/card_images/${project.name}.png`)}
@@ -12,7 +12,7 @@ const ProjectCard = ({ project, openModal }) => {
         <p className="card-title">{project.title}</p>
         <p className="card-tags">{project.tags.join(", ")}</p>
       </div>
-    </div>
+    </button>
   );
 };
 
