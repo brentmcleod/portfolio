@@ -422,3 +422,46 @@ section {
     margin: 0 0 0 2rem;
   }
 }
+
+/* Project Links CSS */
+
+.project-links-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem 0 0 0;
+}
+
+.project-link {
+  width: 100%;
+  height: auto;
+  margin: 0 0.25rem;
+  padding: 0 1rem 0 2.375rem;
+  color: white;
+  background-color: #333;
+  border-radius: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms linear;
+}
+
+.project-link:hover {
+  background-color: #444;
+}
+
+#demo-link {
+  background-image: url("./images/GitHub-Mark-Light-32px.png");
+  background-repeat: no-repeat;
+  background-position: 0.125rem 0.125rem;
+}
+
+#github-link {
+  background-image: url("./images/GitHub-Mark-Light-32px.png");
+  background-repeat: no-repeat;
+  background-position: 0.125rem 0.125rem;
+}
+
+.github-icon {
+  border-radius: 50%;
+}

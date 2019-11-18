@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectLinks from "./ProjectLinks";
 
 const ProjectBoard = ({ project, closeModal }) => {
   return (
@@ -38,7 +39,9 @@ const ProjectBoard = ({ project, closeModal }) => {
               amet stet gubergren. Justo aliquyam duo.
             </p>
           </div>
-          <div className="project-links-tags">Links and tags go here...</div>
+          <div className="project-links-tags">
+            <ProjectLinks demoUrl={"/demo.html"} />
+          </div>
         </div>
       </div>
     </div>
