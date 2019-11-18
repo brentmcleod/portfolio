@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectLinks from "./ProjectLinks";
+import ProjectTags from "./ProjectTags";
 
 const ProjectBoard = ({ project, closeModal }) => {
   return (
@@ -41,6 +42,9 @@ const ProjectBoard = ({ project, closeModal }) => {
           </div>
           <div className="project-links-tags">
             <ProjectLinks demoUrl={"/demo.html"} />
+            <ProjectTags
+              tags={["html", "css", "javascript", "react", "other"]}
+            />
           </div>
         </div>
       </div>

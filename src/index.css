@@ -423,31 +423,37 @@ section {
   }
 }
 
+.project-links-tags h3 {
+  margin: 0 0 0.125rem 0.125rem;
+  font-family: "Rubik";
+}
+
 /* Project Links CSS */
 
 .project-links-wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
   padding: 0.25rem 0 0 0;
 }
 
 .project-link {
   width: 100%;
-  height: auto;
-  margin: 0 0.25rem;
+  height: 2.25rem;
+  margin: 0 0.125rem;
   padding: 0 1rem 0 2.375rem;
   color: white;
   background-color: #333;
   border-radius: 1.125rem;
   font-size: 1.125rem;
-  line-height: 2.25rem;
+  line-height: 2rem;
   text-align: center;
   text-decoration: none;
-  transition: background-color 150ms linear;
+  transition: opacity 150ms linear;
 }
 
 .project-link:hover {
-  background-color: #444;
+  opacity: 0.7;
 }
 
 #demo-link {
@@ -464,4 +470,24 @@ section {
 
 .github-icon {
   border-radius: 50%;
+}
+
+/* Project Tags CSS */
+
+.project-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.25rem 0 0 0;
+}
+
+.project-tag {
+  flex-grow: 1;
+  height: 2.25rem;
+  margin: 0.125rem 0.125rem;
+  padding: 0 1rem;
+  border-radius: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: default;
 }

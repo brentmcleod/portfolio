@@ -2,28 +2,31 @@ import React from "react";
 
 const ProjectLinks = ({ demoUrl }) => {
   return (
-    <div className="project-links-wrapper">
-      {demoUrl && (
+    <>
+      <h3>Links</h3>
+      <div className="project-links-wrapper">
+        {demoUrl && (
+          <a
+            id="demo-link"
+            className="project-link"
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Demo
+          </a>
+        )}
         <a
-          id="demo-link"
+          id="github-link"
           className="project-link"
-          href={demoUrl}
+          href="https://github.com/brentmcleod"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Demo
+          GitHub
         </a>
-      )}
-      <a
-        id="github-link"
-        className="project-link"
-        href="https://github.com/brentmcleod"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-    </div>
+      </div>
+    </>
   );
 };
 
