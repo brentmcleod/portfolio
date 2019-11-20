@@ -69,11 +69,40 @@ header {
 
 header,
 section {
-  margin: 2rem 0 0 0;
+  margin: 1rem 0 0 0;
+}
+
+section a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+section a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #333;
+  transition: height 120ms linear;
+}
+
+section a:hover::after {
+  height: 0.125rem;
 }
 
 #home {
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 5rem 0;
+}
+
+#home p {
+  font-size: 1.5rem;
+}
+
+#about p {
+  text-align: left;
 }
 
 @media screen and (min-width: 600px) {
@@ -82,12 +111,12 @@ section {
     margin: 5rem 0 0 0;
   }
   #home {
-    margin: 2.5rem 0 0 0;
+    margin: 2.5rem 0 10rem 0;
   }
 }
 
 .profile-pic {
-  width: 15%;
+  width: 11rem;
   height: auto;
   border-radius: 50%;
 }
