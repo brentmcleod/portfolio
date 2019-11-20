@@ -17,13 +17,13 @@ const Hamburger = () => {
       <div className="hamburger-menu">
         <ul>
           <li style={{ animationDelay: "100ms" }}>
-            <a href="#about" onClick={toggleActive}>
-              About
+            <a href="#portfolio" onClick={toggleActive}>
+              Portfolio
             </a>
           </li>
           <li style={{ animationDelay: "200ms" }}>
-            <a href="#portfolio" onClick={toggleActive}>
-              Portfolio
+            <a href="#about" onClick={toggleActive}>
+              About
             </a>
           </li>
           <li style={{ animationDelay: "300ms" }}>
