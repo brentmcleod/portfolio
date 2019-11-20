@@ -40,7 +40,13 @@ h1 {
 
 h2 {
   font-family: "Rubik";
-  font-size: calc(1.5rem + 2vmin);
+  font-size: 8vw;
+}
+
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: calc(1.5rem + 2vmin);
+  }
 }
 
 p {
@@ -72,13 +78,21 @@ section {
   margin: 1rem 0 0 0;
 }
 
-section a {
+#home {
+  margin: 1rem 0 5rem 0;
+}
+
+#home p {
+  font-size: 1.5rem;
+}
+
+#home a {
   position: relative;
   color: inherit;
   text-decoration: none;
 }
 
-section a::after {
+#home a::after {
   content: "";
   position: absolute;
   display: block;
@@ -89,16 +103,8 @@ section a::after {
   transition: height 120ms linear;
 }
 
-section a:hover::after {
+#home a:hover::after {
   height: 0.125rem;
-}
-
-#home {
-  margin: 1rem 0 5rem 0;
-}
-
-#home p {
-  font-size: 1.5rem;
 }
 
 #about p {
@@ -512,7 +518,7 @@ section a:hover::after {
 .project-tag {
   flex-grow: 1;
   height: 2.25rem;
-  margin: 0.125rem 0.125rem;
+  margin: 0.25rem 0.125rem;
   padding: 0 1rem;
   border-radius: 1.125rem;
   font-size: 1.125rem;
