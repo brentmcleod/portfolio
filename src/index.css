@@ -39,6 +39,8 @@ h1 {
 }
 
 h2 {
+  margin: 0;
+  padding: 2rem 0;
   font-family: "Rubik";
   font-size: 8vw;
 }
@@ -111,6 +113,20 @@ section {
   text-align: left;
 }
 
+#about img {
+  margin-bottom: 1.3125rem;
+}
+
+#about ul {
+  padding: 0 0 0 1.25rem;
+  font-size: 1.3125rem;
+  text-align: left;
+}
+
+#about li {
+  margin-bottom: 1.25rem;
+}
+
 @media screen and (min-width: 600px) {
   header,
   section {
@@ -125,6 +141,11 @@ section {
   width: 11rem;
   height: auto;
   border-radius: 50%;
+}
+
+.about-pic {
+  width: 100%;
+  height: auto;
 }
 
 /* Hamburger CSS */

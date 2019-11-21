@@ -22,12 +22,11 @@ const Home = () => {
         React framework.
       </p>
       <p>
-        While you are here, take a look at my <a href="#portfolio">portfolio</a>
-        ,{" "}
+        While you're here, take a look at my <a href="#portfolio">portfolio</a>,{" "}
         <span role="img" aria-label="Briefcase">
           💼
         </span>{" "}
-        learn a bit more about <a href="#about">me</a>{" "}
+        learn a bit more <a href="#about">about</a> me{" "}
         <span role="img" aria-label="Grinning Face With Smiling Eyes">
           😄
         </span>{" "}
