@@ -1,5 +1,5 @@
 import React from "react";
-import { tagColors } from "../utils/tagColours";
+import { tagColors } from "../utils/tagColors";
 
 const ProjectTags = ({ tags }) => {
   return (

@@ -21,17 +21,17 @@ const About = () => {
       <p>
         I am an extroverted introvert who always pushes myself to learn and do
         new things with equal measures of creative flare and logical problem
-        solving. I persue all my goals with a laser focus and dedication.
+        solving. I pursue all my goals with a laser focus and dedication.
       </p>
       <p>A few more fun facts about me...</p>
       <ul>
-        <li>I once won $15K on the australian version of Deal Or No Deal.</li>
+        <li>I once won $15K on the Australian version of Deal or No Deal.</li>
         <li>
           I've had two primary school reader books published with my
           illustrations.
         </li>
         <li>
-          I'm a big sci-fi fan who has slept over night (twice) in a line to get
+          I'm a big sci-fi fan who has slept overnight (twice) in a line to get
           into panels at San Diego Comic Con.
         </li>
         <li>
