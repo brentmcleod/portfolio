@@ -1,11 +1,14 @@
 import React from "react";
-import aboutPic from "../../images/about_carousel_001.jpg";
+import Carousel from "../Carousel";
 
 const About = () => {
   return (
     <section id="about">
       <h2>Learn more about me.</h2>
-      <img className="about-pic" src={aboutPic} alt="Brent McLeod" />
+      <Carousel
+        slides={["about_01.jpg", "about_02.jpg", "about_03.jpg"]}
+        indicators={true}
+      />
       <p>
         Born and raised in Melbourne, Australia, I studied illustration at
         Chisholm Institute and then multimedia at Swinburne University where I
@@ -23,6 +26,10 @@ const About = () => {
         new things with equal measures of creative flare and logical problem
         solving. I pursue all my goals with a laser focus and dedication.
       </p>
+      <Carousel
+        slides={["about_01.jpg", "about_02.jpg", "about_03.jpg"]}
+        indicators={true}
+      />
       <p>A few more fun facts about me...</p>
       <ul>
         <li>I once won $15K on the Australian version of Deal or No Deal.</li>

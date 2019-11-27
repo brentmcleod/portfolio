@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "./Carousel";
 import ProjectLinks from "./ProjectLinks";
 import ProjectTags from "./ProjectTags";
 
@@ -12,10 +13,10 @@ const ProjectBoard = ({ project, closeModal }) => {
             <span className="close-inner"></span>
           </button>
         </div>
-        <img
-          className="hero-image"
-          src={require(`../images/projects/hero_images/temp_image.png`)}
-          alt="Project Title"
+        <Carousel
+          slides={["temp_01.png", "temp_01.png", "temp_01.png"]}
+          indicators={true}
+          arrows={true}
         />
         <div className="project-detail-wrapper">
           <div className="project-description">
