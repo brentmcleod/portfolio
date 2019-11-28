@@ -135,6 +135,12 @@ section {
   #home {
     margin: 2.5rem 0 10rem 0;
   }
+  #about p {
+    padding: 0 1rem;
+  }
+  #about ul {
+    padding: 0 0 0 2.25rem;
+  }
 }
 
 .profile-pic {
@@ -594,12 +600,12 @@ section {
   justify-content: center;
   bottom: 5%;
   width: 100%;
-  height: calc(1rem + 1vmin);
+  height: calc(0.5rem + 1vmin);
   z-index: 1;
 }
 
 .carousel-indicator {
-  width: calc(1rem + 1vmin);
+  width: calc(0.5rem + 1vmin);
   margin: 0 calc(0.5rem + 1vmin);
   background-color: transparent;
   box-sizing: border-box;
@@ -678,11 +684,6 @@ section {
   bottom: -0.625rem;
   transform: translate3d(0.5rem, 0, 0) rotate(-45deg) scale(0.7, 1);
 }
-
-/* .carousel-arrow,
-.carousel-indicator-wrapper {
-  mix-blend-mode: exclusion;
-} */
 
 .carousel-arrow:hover,
 .carousel-indicator:hover {
