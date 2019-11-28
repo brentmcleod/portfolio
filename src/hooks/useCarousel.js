@@ -4,7 +4,8 @@ import { useSwipeable } from "react-swipeable";
 const initialCarouselState = {
   offset: 0,
   desired: 0,
-  active: 0
+  active: 0,
+  rotation: 0
 };
 
 const prev = (length, current) => (current - 1 + length) % length;
@@ -30,6 +31,8 @@ const carouselReducer = (state, action) => {
       return { ...state, offset: NaN, active: state.desired };
     case "drag":
       return { ...state, offset: action.offset };
+    case "rotation":
+      return { ...state, rotation: state.rotation + 1 };
     default:
       return state;
   }
@@ -52,7 +55,7 @@ function swiped(e, dispatch, length, dir) {
   }
 }
 
-const useCarousel = (length, interval) => {
+const useCarousel = (length, interval, delay) => {
   const [state, dispatch] = useReducer(carouselReducer, initialCarouselState);
   const handlers = useSwipeable({
     onSwiping(e) {
@@ -72,9 +75,15 @@ const useCarousel = (length, interval) => {
   });
 
   useEffect(() => {
-    const id = setTimeout(() => dispatch({ type: "next", length }), interval);
+    const id = setTimeout(
+      () => {
+        dispatch({ type: "next", length });
+        dispatch({ type: "rotation" });
+      },
+      state.rotation === 0 ? interval + delay : interval
+    );
     return () => clearTimeout(id);
-  }, [state.offset, state.active, length, interval]);
+  }, [state.offset, state.active]);
 
   useEffect(() => {
     const id = setTimeout(() => dispatch({ type: "done" }), transitionTime);

@@ -4,7 +4,7 @@ import Carousel from "../Carousel";
 const About = () => {
   return (
     <section id="about">
-      <h2>Learn more about me.</h2>
+      <h2>Learn more about me</h2>
       <Carousel
         slides={["about_01.jpg", "about_02.jpg", "about_03.jpg"]}
         indicators={true}
@@ -39,6 +39,7 @@ const About = () => {
       </p>
       <Carousel
         slides={["about_01.jpg", "about_02.jpg", "about_03.jpg"]}
+        delay={2500}
         indicators={true}
       />
       <p>A few more fun facts about me...</p>

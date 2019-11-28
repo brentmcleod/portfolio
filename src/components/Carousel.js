@@ -4,11 +4,16 @@ import useCarousel from "../hooks/useCarousel";
 const Carousel2 = ({
   slides,
   interval = 5000,
+  delay = 0,
   arrows = false,
   indicators = false
 }) => {
   const length = slides.length;
-  const [active, setActive, handlers, style] = useCarousel(length, interval);
+  const [active, setActive, handlers, style] = useCarousel(
+    length,
+    interval,
+    delay
+  );
 
   return (
     length > 0 && (
