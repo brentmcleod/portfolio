@@ -117,6 +117,14 @@ section {
   text-align: left;
 }
 
+#about div + p {
+  margin-top: 2.625rem;
+}
+
+#about p + div {
+  margin-top: 2.625rem;
+}
+
 #about ul {
   padding: 0 0 0 1.25rem;
   font-size: 1.3125rem;
@@ -237,7 +245,7 @@ section {
   z-index: 2;
 }
 
-.hamburger.is-active + .hamburger-menu {
+.hamburger.is-active ~ .hamburger-menu {
   visibility: visible;
   opacity: 1;
 }
@@ -272,13 +280,13 @@ section {
   z-index: 1;
 }
 
-.hamburger.is-active + .hamburger-menu + .hamburger-background {
+.hamburger.is-active ~ .hamburger-menu ~ .hamburger-background {
   visibility: visible;
   opacity: 1;
   transition: visibility 0ms, opacity 300ms ease-out;
 }
 
-.hamburger.is-active + .hamburger-menu li {
+.hamburger.is-active ~ .hamburger-menu li {
   animation: hamburger-menu-li 300ms ease-out forwards;
 }
 
