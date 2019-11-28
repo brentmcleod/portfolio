@@ -31,8 +31,12 @@ const carouselReducer = (state, action) => {
       return { ...state, offset: NaN, active: state.desired };
     case "drag":
       return { ...state, offset: action.offset };
-    case "rotation":
-      return { ...state, rotation: state.rotation + 1 };
+    case "auto":
+      return {
+        ...state,
+        desired: next(action.length, state.active),
+        rotation: state.rotation + 1
+      };
     default:
       return state;
   }
@@ -76,14 +80,11 @@ const useCarousel = (length, interval, delay) => {
 
   useEffect(() => {
     const id = setTimeout(
-      () => {
-        dispatch({ type: "next", length });
-        dispatch({ type: "rotation" });
-      },
+      () => dispatch({ type: "auto", length }),
       state.rotation === 0 ? interval + delay : interval
     );
     return () => clearTimeout(id);
-  }, [state.offset, state.active]);
+  }, [state.offset, state.active, state.rotation, delay, interval, length]);
 
   useEffect(() => {
     const id = setTimeout(() => dispatch({ type: "done" }), transitionTime);
