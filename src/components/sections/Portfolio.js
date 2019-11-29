@@ -14,7 +14,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <h2>Take a look at some of my work</h2>
-      <div className="showcase">
+      <div className="project-cards-wrapper">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} openModal={toggleModal} />
         ))}

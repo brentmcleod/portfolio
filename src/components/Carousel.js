@@ -1,7 +1,7 @@
 import React from "react";
 import useCarousel from "../hooks/useCarousel";
 
-const Carousel2 = ({
+const Carousel = ({
   slides,
   interval = 5000,
   delay = 0,
@@ -47,29 +47,31 @@ const Carousel2 = ({
             ))}
           </div>
         )}
-        <div className="carousel-content" {...handlers} style={style}>
-          <img
-            className="carousel-item"
-            src={`/images/${slides[length - 1]}`}
-            alt={slides[length - 1]}
-          />
-          {slides.map((slide, index) => (
+        <div className="carousel-view">
+          <div className="carousel-content" {...handlers} style={style}>
             <img
-              key={index}
               className="carousel-item"
-              src={`/images/${slide}`}
-              alt={slide}
+              src={`/images/${slides[length - 1]}`}
+              alt={slides[length - 1]}
             />
-          ))}
-          <img
-            className="carousel-item"
-            src={`/images/${slides[0]}`}
-            alt={slides[0]}
-          />
+            {slides.map((slide, index) => (
+              <img
+                key={index}
+                className="carousel-item"
+                src={`/images/${slide}`}
+                alt={slide}
+              />
+            ))}
+            <img
+              className="carousel-item"
+              src={`/images/${slides[0]}`}
+              alt={slides[0]}
+            />
+          </div>
         </div>
       </div>
     )
   );
 };
 
-export default Carousel2;
+export default Carousel;

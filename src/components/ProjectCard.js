@@ -8,9 +8,10 @@ const ProjectCard = ({ project, openModal }) => {
         src={require(`../images/projects/card_images/${project.name}.png`)}
         alt={project.title}
       />
-      <div className="card-title-wrapper">
+      <div className="card-details-wrapper">
         <p className="card-title">{project.title}</p>
         <p className="card-tags">{project.tags.join(", ")}</p>
+        <p className="card-instruction">view project</p>
       </div>
     </button>
   );
