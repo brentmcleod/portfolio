@@ -376,26 +376,32 @@ section {
 
 .card-instruction {
   position: relative;
-  display: inline;
-  margin: 0;
+  display: inline-block;
+  margin: 0 0 0.5rem 0;
   padding-left: 0.0625rem;
-  color: #666;
+  color: #999;
   font-size: 1rem;
+  transition: color 120ms linear;
+}
+
+.project-card:hover .card-instruction {
+  color: #333;
 }
 
 .card-instruction::after {
   content: "";
   position: absolute;
   display: block;
+  bottom: -0.25rem;
   left: 0;
   width: 100%;
-  height: 0.0625rem;
-  background-color: #666;
-  transition: height 120ms linear;
+  height: 0.125rem;
+  background-color: #999;
+  transition: background-color 120ms linear;
 }
 
 .project-card:hover .card-instruction::after {
-  height: 0.125rem;
+  background-color: #333;
 }
 
 /* Project Board CSS */
@@ -407,7 +413,6 @@ section {
   width: 100%;
   height: 100%;
   background-color: rgba(30, 30, 30, 0.9);
-  overflow-x: hidden;
   overflow-y: auto;
   z-index: 2;
 }
@@ -428,15 +433,6 @@ section {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .project-board {
-    width: 70vw;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    border-radius: 0.375rem;
   }
 }
 
@@ -512,7 +508,18 @@ section {
   margin: 2rem 0;
 }
 
-@media screen and (min-width: 600px) {
+.project-links-tags h3 {
+  margin: 0 0 0.125rem 0.125rem;
+  font-family: "Rubik";
+}
+
+@media screen and (min-width: 800px) {
+  .project-board {
+    width: 70vw;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 0.375rem;
+  }
   .project-detail-wrapper {
     flex-direction: row;
   }
@@ -525,24 +532,18 @@ section {
   }
 }
 
-.project-links-tags h3 {
-  margin: 0 0 0.125rem 0.125rem;
-  font-family: "Rubik";
-}
-
 /* Project Links CSS */
 
 .project-links-wrapper {
   display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-  padding: 0.25rem 0 0 0;
+  flex-wrap: wrap;
+  margin: 0.25rem 0 1rem 0;
 }
 
 .project-link {
-  width: 100%;
+  flex-grow: 1;
   height: 2.25rem;
-  margin: 0 0.125rem;
+  margin: 0.25rem 0.125rem;
   padding: 0 1rem 0 2.375rem;
   color: white;
   background-color: #333;
@@ -551,23 +552,23 @@ section {
   line-height: 2rem;
   text-align: center;
   text-decoration: none;
-  transition: opacity 150ms linear;
+  transition: background-color 150ms linear;
 }
 
 .project-link:hover {
-  opacity: 0.7;
+  background-color: #666;
 }
 
 #demo-link {
-  background-image: url("./images/GitHub-Mark-Light-32px.png");
+  background-image: url("./images/play-icon-24px.svg");
   background-repeat: no-repeat;
-  background-position: 0.125rem 0.125rem;
+  background-size: 2.25rem 2.25rem;
 }
 
 #github-link {
-  background-image: url("./images/GitHub-Mark-Light-32px.png");
+  background-image: url("./images/github-icon-24px.svg");
   background-repeat: no-repeat;
-  background-position: 0.125rem 0.125rem;
+  background-size: 2.25rem 2.1875rem;
 }
 
 .github-icon {
@@ -579,7 +580,6 @@ section {
 .project-tags-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.25rem 0 0 0;
 }
 
 .project-tag {
@@ -594,24 +594,18 @@ section {
   cursor: default;
 }
 
+.tag-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0.25rem 0.125rem;
+}
+
 /* Carousel CSS */
 
 .carousel {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-}
-
-@media screen and (min-width: 600px) {
-  .carousel {
-    width: 80vw;
-    max-width: 75rem;
-    margin: 0;
-  }
-  .project-board .carousel {
-    width: 70vw;
-    max-width: 62.5rem;
-  }
 }
 
 .carousel-view {
@@ -626,17 +620,6 @@ section {
 .carousel-item {
   width: 100vw;
   max-width: 125rem;
-}
-
-@media screen and (min-width: 600px) {
-  .carousel-item {
-    width: 80vw;
-    max-width: 75rem;
-  }
-  .project-board .carousel-item {
-    width: 70vw;
-    max-width: 62.5rem;
-  }
 }
 
 .carousel-indicator-wrapper {
@@ -673,12 +656,6 @@ section {
   cursor: pointer;
   z-index: 1;
   transition: transform 120ms ease-in-out;
-}
-
-@media screen and (min-width: 600px) {
-  .carousel-arrow {
-    visibility: visible;
-  }
 }
 
 .carousel-arrow.left {
@@ -735,4 +712,30 @@ section {
 
 #about .carousel:first-of-type {
   margin-top: 0;
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 800px) {
+  .carousel {
+    width: 80vw;
+    max-width: 75rem;
+    margin: 0;
+  }
+  .carousel-item {
+    width: 80vw;
+    max-width: 75rem;
+  }
+  .project-board .carousel {
+    width: 70vw;
+    max-width: 62.5rem;
+  }
+  .project-board .carousel-item {
+    width: 70vw;
+    max-width: 62.5rem;
+  }
+  .project-board .carousel-arrow {
+    visibility: visible;
+  }
 }

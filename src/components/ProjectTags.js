@@ -4,8 +4,8 @@ import { tagColors } from "../utils/tagColors";
 const ProjectTags = ({ tags }) => {
   return (
     <>
-      <h3>Tags</h3>
       <div className="project-tags-wrapper">
+        <img className="tag-icon" src="tag-icon-24px.svg" alt="Tag Icon" />
         {tags.map(tag => (
           <div
             key={tag}

@@ -3,7 +3,6 @@ import React from "react";
 const ProjectLinks = ({ demoUrl }) => {
   return (
     <>
-      <h3>Links</h3>
       <div className="project-links-wrapper">
         {demoUrl && (
           <a
