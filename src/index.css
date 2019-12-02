@@ -560,13 +560,13 @@ section {
 }
 
 #demo-link {
-  background-image: url("./images/play-icon-24px.svg");
+  background-image: url("./play-icon-24px.svg");
   background-repeat: no-repeat;
   background-size: 2.25rem 2.25rem;
 }
 
 #github-link {
-  background-image: url("./images/github-icon-24px.svg");
+  background-image: url("./github-icon-24px.svg");
   background-repeat: no-repeat;
   background-size: 2.25rem 2.1875rem;
 }
@@ -589,7 +589,7 @@ section {
   padding: 0 1rem;
   border-radius: 1.125rem;
   font-size: 1.125rem;
-  line-height: 2rem;
+  line-height: 2.125rem;
   text-align: center;
   cursor: default;
 }

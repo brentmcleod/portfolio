@@ -5,10 +5,16 @@ import ProjectBoard from "../ProjectBoard";
 
 const Portfolio = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(0);
 
   const toggleModal = () => {
     document.body.classList.toggle("modal-open");
     setModalOpen(!modalOpen);
+  };
+
+  const openProject = index => {
+    setCurrentProject(index);
+    toggleModal();
   };
 
   return (
@@ -16,10 +22,24 @@ const Portfolio = () => {
       <h2>Take a look at some of my work</h2>
       <div className="project-cards-wrapper">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} openModal={toggleModal} />
+          <ProjectCard
+            key={index}
+            project={{
+              index,
+              name: project.name,
+              title: project.title,
+              tags: project.tags
+            }}
+            openModal={openProject}
+          />
         ))}
       </div>
-      {modalOpen && <ProjectBoard closeModal={toggleModal} />}
+      {modalOpen && (
+        <ProjectBoard
+          project={projects[currentProject]}
+          closeModal={toggleModal}
+        />
+      )}
     </section>
   );
 };

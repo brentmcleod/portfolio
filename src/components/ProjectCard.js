@@ -2,10 +2,14 @@ import React from "react";
 
 const ProjectCard = ({ project, openModal }) => {
   return (
-    <button className="project-card" type="button" onClick={openModal}>
+    <button
+      className="project-card"
+      type="button"
+      onClick={() => openModal(project.index)}
+    >
       <img
         className="card-image"
-        src={require(`../images/projects/card_images/${project.name}.png`)}
+        src={`/images/${project.name}__card.png`}
         alt={project.title}
       />
       <div className="card-details-wrapper">

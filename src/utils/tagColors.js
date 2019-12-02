@@ -1,7 +1,7 @@
 export const tagColors = {
-  html: "#de4b25", //red
-  css: "#2195f1", //blue
-  javascript: "#f0d91d", //yellow
-  react: "#09d3ac", //turquoise
+  HTML: "#de4b25", //red
+  CSS: "#2195f1", //blue
+  Javascript: "#f0d91d", //yellow
+  React: "#09d3ac", //turquoise
   default: "#d3d3d3" //grey
 };

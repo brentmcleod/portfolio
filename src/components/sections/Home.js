@@ -1,10 +1,13 @@
 import React from "react";
-import profilePic from "../../images/brent_profile_pic.png";
 
 const Home = () => {
   return (
     <section id="home">
-      <img className="profile-pic" src={profilePic} alt="Brent McLeod" />
+      <img
+        className="profile-pic"
+        src="/images/home_01.png"
+        alt="Brent McLeod"
+      />
       <h2>
         Hi, I'm Brent McLeod{" "}
         <span role="img" aria-label="Waving Hand">
