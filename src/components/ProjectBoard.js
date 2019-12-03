@@ -16,8 +16,8 @@ const ProjectBoard = ({ project, closeModal }) => {
         <Carousel slides={project.images} indicators={true} arrows={true} />
         <div className="project-detail-wrapper">
           <div className="project-description">
-            {project.description.split("\n").map(p => (
-              <p>{p}</p>
+            {project.description.split("\n").map((p, index) => (
+              <p key={index}>{p}</p>
             ))}
           </div>
           <div className="project-links-tags">

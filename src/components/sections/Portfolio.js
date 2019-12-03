@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { projects } from "../../projects";
 import ProjectCard from "../ProjectCard";
 import ProjectBoard from "../ProjectBoard";
 
-const Portfolio = () => {
+const Portfolio = ({ projects }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(0);
 
