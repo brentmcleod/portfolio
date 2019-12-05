@@ -3,11 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <section id="home">
-      <img
-        className="profile-pic"
-        src="/images/home_01.png"
-        alt="Brent McLeod"
-      />
+      <img className="headshot" src="/images/home_01.png" alt="Brent McLeod" />
       <h2>
         Hi, I'm Brent McLeod{" "}
         <span role="img" aria-label="Waving Hand">
@@ -25,7 +21,7 @@ const Home = () => {
         React framework.
       </p>
       <p>
-        While you're here, take a look at my <a href="#portfolio">portfolio</a>,{" "}
+        While you're here, take a look at my <a href="#portfolio">portfolio</a>{" "}
         <span role="img" aria-label="Briefcase">
           💼
         </span>{" "}

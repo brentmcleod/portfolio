@@ -5,6 +5,7 @@ import Home from "./components/sections/Home";
 import About from "./components/sections/About";
 import Portfolio from "./components/sections/Portfolio";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/_Footer";
 
 function App() {
   const [data, loading] = useData();
@@ -15,6 +16,7 @@ function App() {
       {!loading && <Portfolio projects={data} />}
       <About />
       <Contact />
+      <Footer />
     </div>
   );
 }
